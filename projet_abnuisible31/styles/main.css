@@ -1,4 +1,11 @@
-header {
-  background-color: black;
-  color: white;
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+footer {
+  background-color: rgb(247, 248, 249);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
