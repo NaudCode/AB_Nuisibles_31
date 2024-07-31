@@ -11965,4 +11965,21 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+footer {
+  position: relative; /* Change to relative to be part of the normal flow */
+  width: 100%;
+  min-height: 60px; /* Minimum height of the footer */
+  background-color: #f8f9fa;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+main {
+  padding-bottom: 60px;
 }/*# sourceMappingURL=main.css.map */
