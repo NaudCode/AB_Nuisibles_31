@@ -20,6 +20,16 @@ main {
     padding-bottom: 60px; 
 }
 
-@media(max-width: 1000px){
-    .
+
+.image {
+    max-width: 100%;
+    height: auto;
+}
+.content-container {
+    max-width: 1200px; /* Limiter la largeur pour éviter le chevauchement */
+    margin: auto; /* Centrer la section principale */
+}
+
+.spacing-md {
+    padding: 0 15px; /* Ajouter du padding horizontal */
 }
