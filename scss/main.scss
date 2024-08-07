@@ -16,20 +16,7 @@ footer{
     justify-content: center; /* Center content horizontally */
 }
 
-main {
-    padding-bottom: 60px; 
-}
-
-
-.image {
-    max-width: 100%;
+.img-fluid-logo {
+    max-width: 50%;
     height: auto;
-}
-.content-container {
-    max-width: 1200px; /* Limiter la largeur pour éviter le chevauchement */
-    margin: auto; /* Centrer la section principale */
-}
-
-.spacing-md {
-    padding: 0 15px; /* Ajouter du padding horizontal */
-}
+  }
