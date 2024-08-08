@@ -22,8 +22,11 @@ $primary: #36a8f5;
     --bs-btn-disabled-color: #000; // Couleur du texte désactivé
     --bs-btn-disabled-bg: #ffde07; // Couleur de fond désactivé (modifiée)
     --bs-btn-disabled-border-color: #ffde07; // Couleur de la bordure désactivée (modifiée)
-  }
+}
 
+.card {
+    --bs-card-border-color: #36a8f5 !important;
+}
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
