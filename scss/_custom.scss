@@ -7,6 +7,23 @@ $primary: #36a8f5;
 //$font-family-sans-serif: "helvetica neue", sans-serif !default;
 //$font-family-serif: "Cormorant Garamond", serif !default;
 
+.btn-warning {
+    --bs-btn-color: #000; // Couleur du texte
+    --bs-btn-bg: #ffde07!important; // Couleur de fond (modifiée)
+    --bs-btn-border-color: #ffde07 !important; // Couleur de la bordure (modifiée)
+    --bs-btn-hover-color: #000; // Couleur du texte au survol
+    --bs-btn-hover-bg: #ffffff !important; // Couleur de fond au survol
+    --bs-btn-hover-border-color: #ffc720 !important; // Couleur de la bordure au survol
+    --bs-btn-focus-shadow-rgb: 217, 164, 6; // Ombre de focus
+    --bs-btn-active-color: #000; // Couleur du texte lors d'un clic
+    --bs-btn-active-bg: #ffcd39; // Couleur de fond lors d'un clic
+    --bs-btn-active-border-color: #ffc720; // Couleur de la bordure lors d'un clic
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); // Ombre lors d'un clic
+    --bs-btn-disabled-color: #000; // Couleur du texte désactivé
+    --bs-btn-disabled-bg: #ffde07; // Couleur de fond désactivé (modifiée)
+    --bs-btn-disabled-border-color: #ffde07; // Couleur de la bordure désactivée (modifiée)
+  }
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 

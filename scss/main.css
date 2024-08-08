@@ -1,5 +1,22 @@
 @charset "UTF-8";
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
+.btn-warning {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #ffde07!important;
+  --bs-btn-border-color: #ffde07 !important;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #ffffff !important;
+  --bs-btn-hover-border-color: #ffc720 !important;
+  --bs-btn-focus-shadow-rgb: 217, 164, 6;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #ffcd39;
+  --bs-btn-active-border-color: #ffc720;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #ffde07;
+  --bs-btn-disabled-border-color: #ffde07;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
