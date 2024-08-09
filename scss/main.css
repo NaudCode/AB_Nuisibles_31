@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 .btn-warning {
   --bs-btn-color: #000;
   --bs-btn-bg: #ffde07!important;
