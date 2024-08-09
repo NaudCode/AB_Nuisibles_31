@@ -5,7 +5,7 @@ BEGIN:VCARD
 VERSION:3.0
 FN:AB Nuisibles 31
 TEL;TYPE=WORK,VOICE:0651661300
-EMAIL:ab.nuisibles31@gmail.com
+EMAIL:contact@abnuisibles31.fr
 END:VCARD
         `;
         const blob = new Blob([vCardData], { type: 'text/vcard' });
