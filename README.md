@@ -17,7 +17,7 @@ Contact Information: Company contact details (email & phone).
 __To run this site locally or contribute to its development, follow the steps below:__
 
 Clone the repository:
-https://github.com/Papa-tech/AB_Nuisibles_31/
+https://github.com/NaudCode/AB_Nuisibles_31/
 
 This site uses the Bootstrap framework and SCSS.
 
@@ -51,7 +51,7 @@ Informations de contact : Coordonnées de l'entreprise (mail & telephone)
 __Pour exécuter ce site en local ou contribuer à son développement, suivez les étapes ci-dessous :__
 
 Cloner le dépôt :
-https://github.com/Papa-tech/AB_Nuisibles_31/
+https://github.com/NaudCode/AB_Nuisibles_31/
 
 Celui-ci utilise le Framework Bootstrap et scss.
 
