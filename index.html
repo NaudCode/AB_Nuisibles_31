@@ -2,340 +2,540 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Spécialiste en éradication des nuisibles sur Toulouse, AB Nuisibles 31 propose des services efficaces pour éliminer les rats, fourmis, puces, cafards et punaises de lit. Nettoyage de toiture par pulvérisation. rapides dans Toulouse et sa région.">
-    <meta name="Maxime NAUD" content="Maxime NAUD" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AB Nuisibles 31</title>
+    <!-- SEO Meta Tags - Très importants ! À personnaliser pour chaque page si vous séparez les fichiers -->
+    <title>AB Nuisibles 31 - Dératisation, Désinsectisation à Lévignac & Toulouse</title>
+    <meta name="description" content="Expert en dératisation, désinsectisation et traitement des nids de frelons à Lévignac, Toulouse et ses environs. Devis gratuit et intervention rapide.">
+    <meta name="keywords" content="dératisation, désinsectisation, frelons, nuisibles, Lévignac, Toulouse, 31, AB Nuisibles">
+    <meta name="author" content="Alain Barnier, AB Nuisibles 31">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> <!-- icone à changer-->
+    <!-- Favicon - À remplacer par votre logo -->
+    <link rel="icon" href="https://placehold.co/32x32/10B981/FFFFFF?text=AB" type="image/png">
 
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <style>
+        /* Appliquer la police Poppins par défaut */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Style pour la transition douce entre les pages */
+        .page {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Style pour le menu mobile */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+    </style>
 </head>
+<body class="bg-gray-50 text-gray-800">
 
-<body>
+<!-- ===== HEADER & NAVIGATION ===== -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="nav-link text-2xl font-bold text-teal-600" data-page="home">
+            AB Nuisibles <span class="text-orange-500">31</span>
+        </a>
 
-    <header id="mainNav">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#home">AB NUISIBLES 31</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#presentation">Qui suis-je ?</a></li> 
-                        <li class="nav-item"><a class="nav-link" href="#experience">Mon expérience</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#why-choose-me">Pourquoi me choisir ?</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#carte">Périmètre d'intervention</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#mes_services">Mes services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8">
+            <a href="#" class="nav-link text-gray-600 hover:text-teal-600 transition" data-page="home">Accueil</a>
+            <a href="#" class="nav-link text-gray-600 hover:text-teal-600 transition" data-page="services">Nos Services</a>
+            <a href="#" class="nav-link text-gray-600 hover:text-teal-600 transition" data-page="zones">Zones d'intervention</a>
+            <a href="#" class="nav-link text-gray-600 hover:text-teal-600 transition" data-page="contact">Contact</a>
+        </nav>
+
+        <!-- CTA Button Desktop -->
+        <a href="#" class="nav-link hidden md:inline-block bg-orange-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-600 transition" data-page="contact">
+            Devis Gratuit
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-lg p-6 md:hidden">
+        <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-700">
+            <i class="fas fa-times fa-lg"></i>
+        </button>
+        <nav class="flex flex-col space-y-6 mt-10">
+            <a href="#" class="nav-link text-lg text-gray-700 hover:text-teal-600" data-page="home">Accueil</a>
+            <a href="#" class="nav-link text-lg text-gray-700 hover:text-teal-600" data-page="services">Nos Services</a>
+            <a href="#" class="nav-link text-lg text-gray-700 hover:text-teal-600" data-page="zones">Zones d'intervention</a>
+            <a href="#" class="nav-link text-lg text-gray-700 hover:text-teal-600" data-page="contact">Contact</a>
+            <a href="#" class="nav-link mt-4 inline-block bg-orange-500 text-white font-bold py-3 px-5 rounded-lg text-center" data-page="contact">
+                Devis Gratuit
+            </a>
+        </nav>
+    </div>
+</header>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main>
+    <!-- Chaque section ci-dessous est une "page". Le JS gère leur affichage. -->
+
+    <!-- ===== PAGE: ACCUEIL ===== -->
+    <section id="home" class="page active">
+        <!-- Hero Section -->
+        <div class="bg-teal-600 text-white">
+            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Votre expert contre les nuisibles en Haute-Garonne</h1>
+                <p class="text-lg md:text-xl text-teal-100 mb-8 max-w-3xl mx-auto">Solutions rapides et efficaces pour la dératisation, désinsectisation et désinfection. <br> Intervention sur Toulouse et sa région.</p>
+                <img src="./img/logo.webp" alt="Logo de AB Nuisibles 31 : Un exterminateur tenant un rat par la queu." class="mx-auto my-8 w-48 h-auto">
+                <a href="#" class="nav-link bg-orange-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-orange-600 transition" data-page="contact">
+                    Contactez-moi pour un devis
+                </a>
+            </div>
+        </div>
+
+        <!-- Services Overview -->
+        <div class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Mes domaines d'expertise</h2>
+                    <p class="text-gray-600 mt-2">Pour les particuliers et les professionnels.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <div class="text-teal-500 mb-4"><i class="fas fa-bug fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Désinsectisation</h3>
+                        <p class="text-gray-600">Cafards, punaises de lit, fourmis... J'élimine durablement tous types d'insectes nuisibles à votre logement.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <div class="text-teal-500 mb-4"><i class="fas fa-paw fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Dératisation</h3>
+                        <p class="text-gray-600">Intervention contre les rats, souris et autres rongeurs. Solutions préventives et curatives.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <div class="text-teal-500 mb-4"><i class="fa-solid fa-house fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Traitement de charpente & toiture</h3>
+                        <p class="text-gray-600">Traitements anti-termites et préservation des structures en bois contre les insectes xylophages. Nettoyage toiture, démoussage et application d’hydrofuge pour protéger les toits contre l’usure et les intempéries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="py-16 md:py-24">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://placehold.co/600x400/E0E7FF/4338CA?text=Photo+Intervention" alt="Technicien AB Nuisibles 31 en intervention" class="rounded-lg shadow-xl">
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Pourquoi choisir AB Nuisibles 31 ?</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-500 mt-1 mr-3"></i>
+                            <span><span class="font-bold">Expertise :</span> Gage de professionnalisme et d'utilisation sécurisée des produits.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-500 mt-1 mr-3"></i>
+                            <span><span class="font-bold">Intervention Rapide :</span> J'interviens rapidement dans un large secteur autour Toulouse.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-500 mt-1 mr-3"></i>
+                            <span><span class="font-bold">Devis Gratuit et Transparent :</span> Pas de surprise, vous connaissez le coût de l'intervention avant de vous engager.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-500 mt-1 mr-3"></i>
+                            <span><span class="font-bold">Artisan Local :</span> Un interlocuteur unique, proche de vous et à votre écoute.</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-        </nav>
+        </div>
 
-
-
-
-    </header>
-    
-    <main class="container pt-5">
-        <!-- Page Content-->
-
-        <section id="home" class="container mb-5">
-        <!-- Heading Row-->
-            <div class="row gx-4 gx-lg-5 align-items-center my-auto mt-5">
-                <div class="col-lg-6"><img class="img-fluid-logo d-block mx-auto" src="./img/logo.webp" alt="Logo de AB nuisibles 31, un exterminateur qui tient un rongeur par la queue." /></div>
-                <div class="col-lg-5">
-                    <h1 class="font-weight-light">Votre expert 3D* en éradication de nuisibles et entretien toiture.</h1>
-                    <p>Protégez votre espace de vie avec mon expertise. Éradication garantie pour des lieux sains.</p>
-                    <p><i>*Dératisation, désinsectisation, désinfection</i></p>
-                    <a class="btn btn-pagesjaunes" href="https://www.pagesjaunes.fr/pros/61815478" target="_blank">Ma page jaune</a>
-                    <p><br><br></p>
+        <!-- ===== Qui suis-je ? Section ===== -->
+        <div class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Qui suis-je ?</h2>
+                </div>
+                <div class="max-w-3xl mx-auto text-center text-gray-600 text-lg space-y-4">
+                    <p>
+                        Je m'appelle Alain, auto-entrepreneur spécialisé dans la lutte contre les nuisibles.
+                        Fort de plus de 20 ans d'expérience dans le secteur du bâtiment et de deux années spécifiquement dédiées à l’éradication des nuisibles,
+                        j'ai lancé mon entreprise en 2023 à la suite de l'arrêt de cette activitée de mon précédent employeur, afin de mettre mon expertise à votre service.
+                    </p>
+                    <p>
+                        Mon expérience dans le bâtiment me permet d'identifier rapidement les points d'entrée des nuisibles et de proposer des solutions adaptées à chaque situation, garantissant ainsi un résultat durable et efficace.
+                    </p>
                 </div>
             </div>
-        </section>
-
-        <section>
-            <hr class="my-4 mx-auto" />
-        </section>
-
-
-        <section class="container mb-5 mt-5">
-            <div id="presentation" class="text-center mb-4 pt-5">
-                <h2>Qui suis-je ?</h2> 
-            </div>
-
-            <div>
-                <p>
-                    Je m'appelle Alain, auto-entrepreneur spécialisé dans la lutte contre les nuisibles. 
-                    Fort de plus de 20 ans d'expérience dans le secteur du bâtiment et de deux années spécifiquement dédiées à l’éradication des nuisibles, 
-                    j'ai lancé mon entreprise en 2023 à la suite de l'arrêt de cette activitée de mon précédent employeur, afin de mettre mon expertise à votre service. 
-                </p>
-                <p>
-                   Mon expérience dans le bâtiment me permet d'identifier rapidement les points d'entrée des nuisibles et de proposer des solutions adaptées à chaque situation, garantissant ainsi un résultat durable et efficace.
-                <br><br>
-                </p>
-            </div> 
-
-            <div class="text-center"> 
-                <a href="#mes_services" class="btn btn-outline-secondary">↓ Voir mes services ↓</a> 
-            </div>    
-        </section>  
-                
-        <section class="container mb-5 mt-5 bg-light"> 
-            <div id="experience" class="text-center mb-4 pt-5">
-                <h2>Mon expérience</h2>
-            </div>
-
-            <div>
-                <p>
-                    Mes 20 années d'expérience dans le domaine du bâtiment m'ont permis d'acquérir une connaissance approfondie des structures et des matériaux de construction. Cette expertise est un atout majeur pour identifier les faiblesses de votre habitat et proposer des solutions de lutte anti-nuisibles efficaces et durables.
-                </p>
-                <ul>
-                    <li><strong>Entretien des toitures : </strong>Nettoyage, démoussage et application d’hydrofuge pour protéger les toits contre l’usure et les intempéries. 
-                                Mon expertise en entretien des toitures me permet d'identifier les points d'entrée des nuisibles et de proposer des solutions de protection durables.</li> 
-                    <br>
-                    <li><strong>Isolation des combles : </strong>Je vous conseille sur l'isolation de vos combles pour limiter les accès aux nuisibles et améliorer l'efficacité énergétique de votre logement.</li> 
-                    <br>
-                    <li><strong>Traitement de charpente : </strong>Traitements anti-termites et préservation des structures en bois contre les insectes xylophages.</li> 
-                    <br><br>
-                </ul>
-            </div>
-        </section>
-
-        <section class="container mb-5 mt-5">
-            <div id="why-choose-me" class="text-center mb-4">
-            <h2>Pourquoi me choisir ?</h2>
-            </div>
-
-            <div>
-                <p>
-                    Je comprends parfaitement les problématiques liées à la préservation de l’habitat et je m'engage à vous fournir un service :
-                </p>
-            <ul>
-                <li><strong>Professionnel et rigoureux : </strong>J'utilise des méthodes et des produits efficaces et respectueux de l'environnement.</li>
-                <br>
-                <li><strong>Personnalisé : </strong>J'adapte mes solutions à vos besoins et à votre budget.</li>
-                <br>
-                <li><strong>Discret et rapide : </strong>J'interviens rapidement et en toute discrétion pour minimiser les désagréments.</li> 
-                <br>
-            </ul>
-                <p class="text-center">
-                    <strong>Votre satisfaction est ma priorité !</strong>
-                </p>
         </div>
-        <div class="text-center"> 
-            <a href="#contact" class="btn btn-outline-secondary">↓ Contactez-moi pour un devis gratuit ↓</a> 
-        </div>
-        </section>
-                
 
-        <section class="container bg-light" id="carte">
-            <!-- Call to Action-->
-            <div class="text-center mb-4 pt-5">
-                <p>
-                    <h2>Périmètre d'intervention</h2>
-                </p>
-            </div> 
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-8 mb-5"><img class="img-fluid" src="./img/carte.webp" alt="Carte de la région Toulousaine avec un cercle rouge de rayon d'action" /></div>
-                    <div class="col-lg-8 order-lg-first">
-                        <div class="bg-light h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="text-center mx-auto my-auto p-3">
-                                    <p>Situé à Toulouse - Avenue de Lombez. <br>J'interviens tout autour de Toulouse<br><br></p>
-                                    <p>Retrouvez-moi sur <a href="https://maps.app.goo.gl/3Gu1xf677jPJfWBQA" target="_blank"> Google Map</a>.</p>
-                                </div>
+    </section>
+
+    <!-- ===== PAGE: SERVICES ===== -->
+    <section id="services" class="page">
+        <div class="container mx-auto px-6 py-16 md:py-24">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Mes Services en Détail</h1>
+                <p class="text-gray-600 mt-2">Des solutions sur-mesure pour chaque type de nuisible.</p>
+            </div>
+
+            <div class="space-y-12">
+
+                <!-- Service Dératisation -->
+                <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-8 rounded-lg shadow-lg">
+                    <img src="https://placehold.co/500x350/FEE2E2/991B1B?text=Dératisation" alt="Illustration dératisation" class="rounded-lg">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Dératisation</h2>
+                        <p class="text-gray-600 mb-4">Les rongeurs (rats, souris) peuvent causer des dégâts considérables et présenter des risques sanitaires majeurs. J'utilise des méthodes de dératisation efficaces et respectueuses de l'environnement pour éliminer les nuisibles de votre logement ou de votre entreprise.</p>
+                        <p class="font-semibold text-gray-700 mt-4 mb-2">Méthode utilisée :</p>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Postes d'apatages sécurisés anti vol.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Punaises de Lit -->
+                <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-8 rounded-lg shadow-lg">
+                    <div class="md:order-2">
+                        <img src="https://placehold.co/500x350/E0F2FE/0891B2?text=Punaises+de+Lit" alt="Illustration traitement punaises de lit" class="rounded-lg">
+                    </div>
+                    <div class="md:order-1">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Punaises de Lit</h2>
+                        <p class="text-gray-600 mb-4">Les punaises de lit sont un véritable fléau. Grâce à des traitements ciblés, je garantis l'élimination complète des punaises de lit et une protection longue durée pour votre maison ou votre hôtel. Intervention rapide et discrète.</p>
+                        <p class="font-semibold text-gray-700 mt-4 mb-2">Méthode utilisée :</p>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Insecticides pulvérisés (x3 passages).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Blattes (Cafards) -->
+                <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-8 rounded-lg shadow-lg">
+                    <img src="https://placehold.co/500x350/D1FAE5/065F46?text=Blattes" alt="Illustration traitement blattes et cafards" class="rounded-lg">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Blattes (Cafards)</h2>
+                        <p class="text-gray-600 mb-4">Les blattes sont des nuisibles tenaces qui peuvent transmettre des maladies. J'identifie les points d'entrée et les sources d'infestation, et j'applique des anti-cafards spécifiques pour éradiquer ces insectes de votre maison ou local commercial.</p>
+                        <p class="font-semibold text-gray-700 mt-4 mb-2">Méthodes utilisées :</p>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Préventif : gel anti-blattes.</li>
+                            <li>Curatif : pulvérisation et pièges autocollants.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Puces -->
+                <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-8 rounded-lg shadow-lg">
+                    <div class="md:order-2">
+                        <img src="https://placehold.co/500x350/FEF3C7/92400E?text=Puces" alt="Illustration traitement anti-puces" class="rounded-lg">
+                    </div>
+                    <div class="md:order-1">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Puces</h2>
+                        <p class="text-gray-600 mb-4">Les puces envahissent votre domicile ? Je vous aide à vous en débarrasser rapidement ! J'utilise des produits sûrs pour votre famille et vos animaux de compagnie pour retrouver un espace sain. Élimination des puces garantie.</p>
+                        <p class="font-semibold text-gray-700 mt-4 mb-2">Méthode utilisée :</p>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Insecticides pulvérisés.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Fourmis -->
+                <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-8 rounded-lg shadow-lg">
+                    <img src="https://placehold.co/500x350/FECACA/7F1D1D?text=Fourmis" alt="Illustration traitement anti-fourmis" class="rounded-lg">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Fourmis</h2>
+                        <p class="text-gray-600 mb-4">Les fourmis envahissent votre maison ? J'applique des traitements anti-fourmis efficaces pour éliminer ces insectes et empêcher leur retour. Intervention rapide et solutions durables.</p>
+                        <p class="font-semibold text-gray-700 mt-4 mb-2">Méthodes utilisées :</p>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Gel anti-fourmis.</li>
+                            <li>Pulvérisation.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Entretien Toiture -->
+                <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-8 rounded-lg shadow-lg">
+                    <div class="md:order-2">
+                    <img src="https://placehold.co/500x350/CFFAFE/0369A1?text=Entretien+Toiture" alt="Illustration entretien toiture" class="rounded-lg">
+                    </div>
+                        <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Entretien Toiture</h2>
+                        <p class="text-gray-600 mb-4">Redonnez un coup d'éclat à votre toiture grâce à mon service de nettoyage par pulvérisation ! Élimination efficace des mousses, lichens et saletés. Protégez votre toiture durablement avec un traitement hydrofuge qui imperméabilise et prévient les futures infiltrations.</p>
+                        <p class="font-semibold text-gray-700 mt-4 mb-2">Méthode utilisée :</p>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Pulvérisation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PAGE: ZONES D'INTERVENTION ===== -->
+    <section id="zones" class="page">
+        <div class="container mx-auto px-6 py-16 md:py-24">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Nos Zones d'Intervention</h1>
+                <p class="text-gray-600 mt-2">Basé à Toulouse, j'interviens dans un large périmètre en Haute-Garonne.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h2 class="text-2xl font-bold mb-4">Secteur Principal :</h2>
+                    <p class="text-gray-700 mb-6">J'interviens dans Toulouse et les communes avoisinantes. Voici une liste non-exhaustive des villes où j'interviens régulièrement :</p>
+                    <ul class="grid grid-cols-2 md:grid-cols-3 gap-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt text-teal-500 mr-2"></i>Toulouse</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt text-teal-500 mr-2"></i>Brax</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt text-teal-500 mr-2"></i>Pibrac</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt text-teal-500 mr-2"></i>Léguevin</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt text-teal-500 mr-2"></i>Colomiers</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt text-teal-500 mr-2"></i>Tournefeuille</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt text-teal-500 mr-2"></i>Blagnac</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt text-teal-500 mr-2"></i>Balma</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt text-teal-500 mr-2"></i>Cornebarrieu</li>
+                    </ul>
+                    <p class="mt-6 text-gray-600">Votre commune n'est pas dans la liste ? <a href="#" class="nav-link text-teal-600 font-bold hover:underline" data-page="contact">Contactez-moi</a></p>
+                </div>
+                <div class="h-80 md:h-full w-full rounded-lg shadow-lg overflow-hidden">
+                    <!-- Intégration Google Maps - Remplacer par votre propre carte -->
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11557.869804634624!2d1.408333315496393!3d43.59769997912327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb76e0a86e39%3A0x83512b6f123015f3!2s136%20Av.%20de%20Lombez%2C%2031300%20Toulouse!5e0!3m2!1sfr!2sfr!4v1692723600000!5m2!1sfr!2sfr"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <        <!-- ===== PAGE: CONTACT ===== -->
+    <section id="contact" class="page">
+        <div class="container mx-auto px-6 py-16 md:py-24">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Contact & Devis</h1>
+                <p class="text-gray-600 mt-2">Une question ? Besoin d'un devis gratuit ? Appelez-moi.</p>
+            </div>
+            <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-xl">
+                <!-- Contact Info -->
+                <div class="bg-teal-50 p-8 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-6 text-center">Mes Coordonnées</h2>
+                    <div class="space-y-6 text-gray-700">
+                        <div class="flex items-start">
+                            <i class="fas fa-phone fa-lg text-teal-600 mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-bold">Téléphone</h3>
+                                <a href="tel:+33651661300" class="hover:text-teal-600">06 51 66 13 00</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope fa-lg text-teal-600 mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-bold">Email</h3>
+                                <a href="mailto:ab.nuisibles31@gmail.com" class="hover:text-teal-600">ab.nuisibles31@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt fa-lg text-teal-600 mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-bold">Adresse</h3>
+                                <p>136 Avenue de Lombez,<br>31300 Toulouse</p>
+                                <p class="text-sm mt-1">(Intervention sur site, pas de réception du public)</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            
-        </section>
-
-        <section id="mes_services" class="mb-5 mt-5">
-            <!-- Content Row-->
-            <div class="text-center mb-4 pt-5">
-                <h2>Mes services</h2>
             </div>
-
-            <div class="row gx-4 gx-lg-5">
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h4 class="card-title">Dératisation</h4>
-                            <p class="card-text">
-                                <strong>Éliminer ces rongeurs (rats, souris)</strong> : ils peuvent causer des dégâts considérables et présenter des risques sanitaires majeurs. 
-                                J'utilise des méthodes de <strong>dératisation efficaces et respectueuses de l'environnement</strong> 
-                                pour éliminer les nuisibles de votre logement ou de votre entreprise.
-                            <p>
-                            <b>Méthode utilisée :</b>
-                            <ul>
-                                <li>Postes d'apatages sécurisés anti vol.</li>
-                            </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h4 class="card-title">Punaises de Lit</h4>
-                            <p class="card-text">
-                                <strong>Traitement anti punaises de lit</strong> : Les punaises de lit sont un véritable fléau. Grâce à des traitements ciblés, 
-                                je garantis l'élimination complète des punaises de lit et une protection longue durée pour votre maison ou votre hôtel. 
-                                <strong>Intervention rapide et discrète.</strong>
-                            </p>
-                            <p>
-                                <b>Méthode utilisée :</b>
-                                <ul>
-                                    <li>Insecticides pulvérisés (x3 passages).</li>
-                                </ul>
-                            </p>
-                        </div>   
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h4 class="card-title">Blattes (Cafards)</h4>
-                            <p class="card-text">
-                                <strong>Désinsectisation cafards et blattes</strong> :  Les blattes (cafards) sont des nuisibles tenaces qui peuvent transmettre des maladies. 
-                                J'identifie les points d'entrée et les sources d'infestation, et j'applique des <strong>anti-cafards</strong> spécifiques pour éradiquer ces insectes de votre maison ou local commercial.
-                            </p>
-                            <p>
-                                <b>Méthodes utilisées :</b>
-                                <ul>
-                                    <li>Préventif : gel anti-blattes ;</li>
-                                    <li>Curatisif : pulvérisation et pièges autocollants.</li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h4 class="card-title">Puces</h4>
-                            <p class="card-text">
-                                <strong>Traitement anti-puces à domicile</strong> : Les puces envahissent votre domicile ?  Je vous aide à vous en débarrasser rapidement ! 
-                                J'utilise des produits sûrs pour votre famille et vos animaux de compagnie pour retrouver un espace sain. 
-                                <strong>Élimination des puces garantie.</strong>
-                            </p>
-                            <p>
-                                <b>Méthode utilisée :</b>
-                                <ul>
-                                    <li>Insecticides pulvérisés.</li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h4 class="card-title">Fourmis</h4>
-                            <p class="card-text">
-                                <strong>Débarrassez-vous des fourmis</strong> : Les fourmis envahissent votre maison ? 
-                                J'applique des traitements anti-fourmis efficaces pour éliminer ces insectes et empêcher leur retour. 
-                                <strong>Intervention rapide et solutions durables.</strong>
-                            </p>
-                            <p>
-                                <b>Méthodes utilisées :</b>
-                                <ul>
-                                    <li>Gel anti-fourmis ;</li>
-                                    <li>Pulvérisation</li>
-                                </ul>
-                            </p>
-                        </div>    
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h4 class="card-title">Entretien toiture</h4>
-                            <p class="card-text">
-                                <strong>Nettoyage et démoussage de toiture</strong> : Redonnez un coup d'éclat à votre toiture grâce à mon service de nettoyage par pulvérisation ! 
-                                Élimination efficace des mousses, lichens et saletés.  <strong>Protégez votre toiture durablement avec un traitement hydrofuge qui imperméabilise et prévient les futures infiltrations.</strong>
-                            </p>
-                            <p>
-                            <b>Méthode utilisée :</b>
-                            <ul>
-                                <li>Pulvérisation</li>
-                            </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
         </div>
-        </section>
+    </section>
 
-        <section class="container bg-light mb-5">
-            <div class="text-center pt-5" id="contact">
-                <p>
-                    <h2>Contactez-moi</h2>
-                </p>
-            </div>
-            <div class="text-center">
-                <p>
-                    <button id="downloadVCard" class="btn btn-primary">Ajoutez-moi à vos contacts</button>
-                </p>
-            </div>
-            <div class="col-md-10 col-lg-8 mx-auto text-center pb-5">
-                <div class="container px-4 px-lg-5">
-                  <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-6 mb-3 mb-md-0">
-                      <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                          <i class="fas fa-envelope text-primary mb-2"></i>
-                          <h4 class="text-uppercase m-0">E-mail</h4>
-                          <a href="mailto:contact@abnuisibles31.fr" class="small text-black-50">contact@abnuisibles31.fr</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 mb-3 mb-md-0">
-                      <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                          <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                          <h4 class="text-uppercase m-0">Téléphone</h4>
-                          <a href="tel:+33651661300" class="small text-black-50">06 51 66 13 00</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+    <!-- ===== PAGE: MENTIONS LÉGALES ===== -->
+    <section id="mentions" class="page">
+        <div class="container mx-auto px-6 py-16 md:py-24">
+            <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Mentions Légales</h1>
+                <div class="prose max-w-none text-gray-700">
+                    <p>Conformément aux dispositions des Articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004 pour la Confiance dans l’économie numérique, dite L.C.E.N., il est porté à la connaissance des utilisateurs et visiteurs du site AB Nuisibles 31 les présentes mentions légales.</p>
+
+                    <h2 class="text-2xl font-bold mt-6 mb-4">1. Identification de l’éditeur</h2>
+                    <ul>
+                        <li><strong>Nom de l'entreprise :</strong> Alain Barnier (Entrepreneur individuel)</li>
+                        <li><strong>Nom commercial :</strong> AB Nuisibles 31</li>
+                        <li><strong>Adresse du siège social :</strong> 136 Avenue de Lombez, 31300 Toulouse</li>
+                        <li><strong>Numéro de téléphone :</strong>06 51 66 13 00</li>
+                        <li><strong>Adresse e-mail :</strong> ab.nuisibles31@gmail.com</li>
+                        <li><strong>SIREN :</strong> 919 152 694</li>
+                        <li><strong>SIRET :</strong> 919 152 694 00019</li>
+                        <li><strong>Code APE :</strong> Désinfection, désinsectisation, dératisation (8129A)</li>
+                        <li><strong>Date de début d'activité :</strong> 01/09/2022</li>
+                        <li>Le site est dispensé d’immatriculation au Registre du Commerce et des Sociétés (RCS) et au Répertoire des Métiers (RM).</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold mt-6 mb-4">2. Directeur de la publication</h2>
+                    <p>Le directeur de la publication est Monsieur Alain Barnier.</p>
+
+                    <h2 class="text-2xl font-bold mt-6 mb-4">3. Hébergement du site</h2>
+                    <p>Le site AB Nuisibles 31 est hébergé par la société GitHub, Inc.</p>
+                    <ul>
+                        <li><strong>Nom de l'hébergeur :</strong> GitHub, Inc.</li>
+                        <li><strong>Adresse de l'hébergeur :</strong> 88 Colin P Kelly Jr St, San Francisco, CA 94107, United States</li>
+                        <li><strong>Contact de l'hébergeur :</strong> Le support de GitHub est joignable via leur interface de contact en ligne sur leur site web.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold mt-6 mb-4">4. Propriété intellectuelle</h2>
+                    <p>L'ensemble de ce site (contenus, textes, images, vidéos, logos) constitue une œuvre protégée par la législation en vigueur sur le droit d'auteur et la propriété intellectuelle. Sauf autorisation préalable et écrite de M. Alain Barnier, toute reproduction ou utilisation de son contenu est strictement interdite.</p>
+
+                    <h2 class="text-2xl font-bold mt-6 mb-4">5. Données personnelles</h2>
+                    <p>Les informations recueillies via le formulaire de contact sont enregistrées dans un fichier informatisé par M. Alain Barnier pour la gestion des demandes de devis et de contact. Elles sont conservées le temps nécessaire à la gestion de la relation commerciale et ne sont destinées qu'à l'usage de l'entreprise. Conformément à la loi "informatique et libertés", vous pouvez exercer votre droit d'accès aux données vous concernant et les faire rectifier en contactant : ab.nuisibles@gmail.com</p>
                 </div>
             </div>
-        </section>
-
-    </main>
-        
-
-    <footer>
-        <div>
-            <p class="text-center aligh-self-center"> 
-            </p>
         </div>
+    </section>
 
-    
-    </footer>
-    
-    <!-- Script pour bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    <!-- Script -->
-    <script src="script.js"></script>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-gray-800 text-white">
+    <div class="container mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-4 gap-8">
+            <!-- About -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">AB Nuisibles 31</h3>
+                <p class="text-gray-400">Votre artisan local pour une tranquillité retrouvée.</p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="nav-link text-gray-400 hover:text-white" data-page="home">Accueil</a></li>
+                    <li><a href="#" class="nav-link text-gray-400 hover:text-white" data-page="services">Services</a></li>
+                    <li><a href="#" class="nav-link text-gray-400 hover:text-white" data-page="contact">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Legal -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Légal</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="nav-link text-gray-400 hover:text-white" data-page="mentions">Mentions Légales</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contactez-moi</h3>
+                <ul class="space-y-3 text-gray-400">
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-3"></i>
+                        <a href="tel:+33651661300" class="hover:text-white">06 51 66 13 00</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-3"></i>
+                        <a href="mailto:ab.nuisibles31@gmail.com" class="hover:text-white">ab.nuisibles31@gmail.com</a>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                        <span>136 Avenue de Lombez, 31300 Toulouse</span>
+                    </li>
+                </ul>
+
+                <!-- Bouton Pages Jaunes -->
+                <a href="https://www.pagesjaunes.fr/pros/61815478" target="_blank" class="inline-block mt-4 bg-yellow-400 text-gray-800 font-bold py-2 px-4 rounded-lg hover:bg-yellow-500 transition">
+                    <i class="fas fa-book-open mr-2"></i>Ma page jaune
+                </a>
+
+            </div>
+        </div>
+        <div class="mt-10 pt-8 border-t border-gray-700 text-center text-gray-500 text-sm">
+            <p>&copy; <span id="currentYear"></span> AB Nuisibles 31. Tous droits réservés.
+            <br>
+            Ce site n'utilise pas de cookie analysant vos faits et gestes. Votre vie privée est une de mes priorité.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.nav-link');
+        const pages = document.querySelectorAll('.page');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function showPage(pageId) {
+            // Cacher toutes les pages
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Afficher la page demandée
+            const pageToShow = document.getElementById(pageId);
+            if (pageToShow) {
+                pageToShow.classList.add('active');
+                window.scrollTo(0, 0); // Remonter en haut de la page
+            }
+        }
+
+        // Gérer les clics sur les liens de navigation
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const pageId = this.dataset.page;
+                showPage(pageId);
+                // Fermer le menu mobile si ouvert
+                if (mobileMenu.classList.contains('open')) {
+                    mobileMenu.classList.remove('open');
+                }
+            });
+        });
+
+        // Gérer l'ouverture/fermeture du menu mobile
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.add('open');
+        });
+
+        closeMobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.remove('open');
+        });
+
+        // Mettre à jour l'année dans l'élément #currentYear
+        const yearSpan = document.getElementById("currentYear");
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+
+        // Afficher la page d'accueil par défaut
+        showPage('home');
+    });
+</script>
 
 </body>
 </html>
