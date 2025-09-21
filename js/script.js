@@ -21,4 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenu.classList.remove('open');
         });
     }
+
+    // Gérer la fermeture du menu mobile lorsque l'on clique sur un lien de navigation
+    // Cela améliore l'expérience utilisateur en masquant le menu après la sélection d'une page
+    const mobileNavLinks = document.querySelectorAll('#mobile-menu a');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (mobileMenu.classList.contains('open')) {
+                mobileMenu.classList.remove('open');
+            }
+        });
+    });
 });
